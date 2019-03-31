@@ -132,9 +132,10 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void onSignInBtClicked(View v){
-        startActivity(new Intent(MainActivity.this, MainMenuActivity.class));
+        ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA},1000);
+        startActivity(new Intent(MainActivity.this, LogInActivity.class));
     }
     public void onSignUpBtClicked(View v){
-        startActivity(new Intent(MainActivity.this, SellerMenuActivity.class));
+        startActivity(new Intent(MainActivity.this, CustomerSignUpActivity.class));
     }
 }
